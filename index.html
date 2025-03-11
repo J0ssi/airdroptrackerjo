@@ -3,51 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airdrop Farmer</title>
+    <title>Airdrop Tracker Jo</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="header">
-        <h1>Airdrop Farmer</h1>
-        <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
-    </div>
+    <header>
+        <h1 class="fade-in">Airdrop Tracker Jo</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#get-started" class="btn">Get Started</a></li>
+                <li><button id="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="tabs">
-        <div class="tab active" onclick="showTab('todo')">To Do</div>
-        <div class="tab" onclick="showTab('checkedin')">Checked-In</div>
-        <div class="tab" onclick="showTab('completed')">Completed Today</div>
-        <div class="tab" onclick="showTab('categories')">Categories</div>
-    </div>
+    <section id="hero">
+        <h2 class="fade-in">Track and manage your airdrops efficiently</h2>
+        <p class="fade-in">A one-stop solution to keep up with daily check-ins, testnets, and mainnet tasks.</p>
+        <a href="#get-started" class="btn fade-in">Start Tracking</a>
+    </section>
 
-    <div id="todo" class="content active">
-        <ul id="todo-list" class="task-list"></ul>
-    </div>
-    <div id="checkedin" class="content">
-        <ul id="checkedin-list" class="task-list"></ul>
-    </div>
-    <div id="completed" class="content">
-        <ul id="completed-list" class="task-list"></ul>
-    </div>
-    <div id="categories" class="content">
-        <ul id="category-list" class="category-list"></ul>
-    </div>
+    <section id="features">
+        <h2 class="slide-in">Features</h2>
+        <div class="features-container">
+            <div class="feature fade-in">
+                <h3>🔍 Airdrop Management</h3>
+                <p>Easily track, edit, and manage your airdrops.</p>
+            </div>
+            <div class="feature fade-in">
+                <h3>📆 Daily Check-Ins</h3>
+                <p>Keep up with daily tasks and never miss an airdrop.</p>
+            </div>
+            <div class="feature fade-in">
+                <h3>🤖 AI Suggestions</h3>
+                <p>Get recommendations on trending and relevant airdrops.</p>
+            </div>
+        </div>
+    </section>
 
-    <button class="add-btn" onclick="showAddForm()">+</button>
+    <section id="about">
+        <h2 class="slide-in">About</h2>
+        <p class="fade-in">Airdrop Tracker Jo is designed to simplify your airdrop farming. Manage tasks, track rewards, and stay ahead in the crypto space.</p>
+    </section>
 
-    <div id="add-form" class="add-form">
-        <input type="text" id="title" placeholder="Airdrop Title">
-        <select id="category">
-            <option value="Daily Check-in">Daily Check-in</option>
-            <option value="Testnet">Testnet</option>
-            <option value="Mainnet">Mainnet</option>
-            <option value="Depin">Depin</option>
-        </select>
-        <textarea id="description" placeholder="Description" rows="3"></textarea>
-        <input type="url" id="link" placeholder="Airdrop Link">
-        <button class="add-btn-form" onclick="addAirdrop()">Add Airdrop</button>
-        <button class="close-btn" onclick="hideAddForm()">Close</button>
-    </div>
+    <section id="get-started">
+        <h2 class="slide-in">Get Started</h2>
+        <p class="fade-in">Sign in with Google or email to sync your progress.</p>
+        <button class="btn fade-in">Sign In</button>
+    </section>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>© 2025 Airdrop Tracker Jo. All rights reserved.</p>
+    </footer>
 </body>
 </html>
