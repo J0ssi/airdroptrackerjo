@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airdrop Farmer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Airdrop Farmer</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('todo')">To Do</div>
+        <div class="tab" onclick="showTab('checkedin')">Checked-In</div>
+        <div class="tab" onclick="showTab('completed')">Completed Today</div>
+        <div class="tab" onclick="showTab('categories')">Categories</div>
+    </div>
+
+    <div id="todo" class="content active">
+        <ul id="todo-list" class="task-list"></ul>
+    </div>
+    <div id="checkedin" class="content">
+        <ul id="checkedin-list" class="task-list"></ul>
+    </div>
+    <div id="completed" class="content">
+        <ul id="completed-list" class="task-list"></ul>
+    </div>
+    <div id="categories" class="content">
+        <ul id="category-list" class="category-list"></ul>
+    </div>
+
+    <button class="add-btn" onclick="showAddForm()">+</button>
+
+    <div id="add-form" class="add-form">
+        <input type="text" id="title" placeholder="Airdrop Title">
+        <select id="category">
+            <option value="Daily Check-in">Daily Check-in</option>
+            <option value="Testnet">Testnet</option>
+            <option value="Mainnet">Mainnet</option>
+            <option value="Depin">Depin</option>
+        </select>
+        <textarea id="description" placeholder="Description" rows="3"></textarea>
+        <input type="url" id="link" placeholder="Airdrop Link">
+        <button class="add-btn-form" onclick="addAirdrop()">Add Airdrop</button>
+        <button class="close-btn" onclick="hideAddForm()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
