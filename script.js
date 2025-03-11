@@ -5,10 +5,7 @@ themeToggle.addEventListener("click", () => {
     themeToggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
-// Animation Trigger on Scroll
-const fadeIns = document.querySelectorAll(".fade-in");
-const slideIns = document.querySelectorAll(".slide-in");
-
+// Ensure animations trigger when elements enter viewport
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -17,5 +14,7 @@ const observer = new IntersectionObserver(entries => {
     });
 }, { threshold: 0.5 });
 
-fadeIns.forEach(element => observer.observe(element));
-slideIns.forEach(element => observer.observe(element));
+// Apply observer to elements
+document.querySelectorAll(".fade-in, .slide-in").forEach(element => {
+    observer.observe(element);
+});
